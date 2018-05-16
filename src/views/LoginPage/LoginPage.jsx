@@ -34,9 +34,28 @@ class LoginPage extends React.Component {
     super(props);
     // we use this to make the card to appear after the page has been rendered
     this.state = {
-      cardAnimaton: "cardHidden"
+      cardAnimaton: "cardHidden",
+      counter:0
     };
+
+    // this.click_counter = this.click_counter.bind(this)
   }
+  // shouldComponentUpdate(){
+  //   console.log("should",this.state.counter)
+  //   return true
+  // }
+
+  // click_counter(){
+  //   //this.state.counter+=1
+  //   console.log(this.state.counter)
+  // //  this.setState({counter : this.state.counter+1})
+  //   this.setState((prevState, props) => {
+  //       console.log("prev",prevState)
+  //       console.log("props",props)
+  //       return {counter: prevState.counter + 1};
+  //     }
+  //   )
+  // }
   componentDidMount() {
     // we add a hidden class to the card and after 700 ms we delete it and the transition appears
     setTimeout(
@@ -50,7 +69,7 @@ class LoginPage extends React.Component {
     const { classes, ...rest } = this.props;
     return (
       <div>
-        
+
         <div
           className={classes.pageHeader}
           style={{
@@ -67,16 +86,16 @@ class LoginPage extends React.Component {
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Signup for MyJobTank</h4>
                       <div className={classes.socialLine}>
-                        
+
                           <FaLinkedinSquare style={{margin:"5px", fontSize:"24px"}}/>
                            <FaFacebookSquare style={{margin:"5px", fontSize:"24px"}}/>
                             <FaGooglePlusSquare style={{margin:"5px", fontSize:"24px"}}/>
-                        
-                        
+
+
                       </div>
                     </CardHeader>
                     <p className={classes.divider}>Or Be Classical</p>
-                    <CardBody>
+                    <CardBody >
                       <CustomInput
                         labelText="First Name..."
                         id="first"
@@ -128,10 +147,10 @@ class LoginPage extends React.Component {
                           to="/login"
                           className={classes.item}
                           activeClassName="active"
-                          
+
                         >
                           <Button simple color="primary" size="lg" >
-                              Get started 
+                              Get started
                           </Button>
                         </NavLink>
                     </CardFooter>
@@ -140,7 +159,7 @@ class LoginPage extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
-          
+
         </div>
       </div>
     );
