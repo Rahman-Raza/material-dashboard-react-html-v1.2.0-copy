@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 // material-ui components
 import withStyles from "material-ui/styles/withStyles";
 import InputAdornment from "material-ui/Input/InputAdornment";
+import TextField from 'material-ui/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 import LockOutline from "@material-ui/icons/LockOutline";
@@ -20,6 +24,9 @@ import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
+
+
+
 
 import signupPageStyle from "assets/jss/material-dashboard-react/loginPage.jsx";
 
@@ -158,6 +165,7 @@ class LoginPage extends React.Component {
                 </Card>
               </GridItem>
             </GridContainer>
+
           </div>
 
         </div>
